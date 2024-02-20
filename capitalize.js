@@ -2,11 +2,11 @@ const val = "this will bE caPitALIZED for eACH woRD";
 function wordsCaps(str) {
   str = str.toLowerCase();
   const tempArr = [];
-  let words = str.split("");
+  let words = str.split(" ");
   words.forEach(word => {
-    let temp = word.toUpperCase();
+    let temp = word.slice(0, 1).toUpperCase() + word.slice(1);
     tempArr.push(temp);
   })
-  return tempArr.join("");
+  return tempArr.join(" ");
 }
 console.log(wordsCaps(val));
